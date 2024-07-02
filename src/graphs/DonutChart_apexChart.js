@@ -31,13 +31,13 @@ const DonutChart = ({ data, colorsMap, title}) => {
       text: title,
       align: 'center', 
       style: {
-        fontSize: '20px',
+        fontSize: '18px',
         fontWeight: 'bold',
         color: '#263238'
       },
       floating: false, 
-      offsetX: -50,
-      offsetY: 170,
+      offsetX: -55,
+      offsetY: 135,
     },
 
     tooltip: {
@@ -52,7 +52,7 @@ const DonutChart = ({ data, colorsMap, title}) => {
 
   return (
 
-      <Chart options={options} series={series} type="donut" height={350} width={500} />
+      <Chart options={options} series={series} type="donut"  />
    
   );
 };

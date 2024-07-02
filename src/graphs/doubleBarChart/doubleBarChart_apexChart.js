@@ -77,7 +77,7 @@ const GroupedBarChart = ({ data,title, labels, colorsMap}) => {
 
   return (
     <div>
-      <Chart options={options} series={series} type="bar" height={350} width={600}/>
+      <Chart options={options} series={series} type="bar" />
     </div>
   );
 };

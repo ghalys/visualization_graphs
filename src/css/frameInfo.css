@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  height: 150px;
+  width: 40%;
   /* padding: 20px; */
 }
 
@@ -54,9 +56,13 @@
   margin-top: auto;
   margin-left: auto;
   margin-right: 5px;
+}
+.positive-evolution{
+  color: #00B69B;
+}
+.negative-evolution{
   color: red;
 }
-
 .arrow-icon {
   width: 20px;
   height: 20px;

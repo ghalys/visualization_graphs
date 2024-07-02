@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 .app {
   background-color: #2854C5;
   display: flex;
@@ -9,8 +20,8 @@
 .frame {
   display: flex;
   /* flex-direction: row; */
-  flex-wrap: wrap;
   /* align-items: center; */
+  flex-wrap: wrap;
   height: 92vh;
   width: 86%;
   margin-left: auto;
@@ -25,10 +36,40 @@
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  height: 150px;
-  width: 20%;
+  padding: 10px;
 }
 
+.info{
+  /* background-color: white; */
+  width: 60%;
+  padding: 20px;
+  flex-wrap: wrap;
+
+}
+.lineChart{
+  justify-content: center; 
+  align-items: center; 
+  height: 300px;
+  width: 30%;
+}
+
+
+.pieChart{
+  height: 320px;
+  width: 450px;
+}
+.groupedBarChart{
+  height: 320px;
+  width: 30%;
+}
+.donutChart{
+  height: 320px;
+  width: 450px;
+}
+.histo{
+  height: 300px;
+  width: 30%;
+}
 
 .text-box {
   padding: 20px;

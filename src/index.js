@@ -58,10 +58,10 @@ const dataFallbacks = [
 ];
 
 const dataCalls = [
-  { item: 'One Call', value: 63 },
+  { item: 'One Call', value: 40 },
   { item: 'Two Calls', value: 25 },
   { item: 'Three Calls', value: 25 },
-  { item: 'More Calls', value: 9 }
+  { item: 'More Calls', value: 10 }
 ];
 
 const labelsFallbacks = ["NLU Fallbacks","Functional Fallbacks"]
@@ -75,6 +75,12 @@ const colorsMap = {
   'More Calls':'#339FFF',
 };
 
+const infoTotalInteraction = {
+  title:"Total Interactions",
+  number: "50",
+  percentage:"8.5%",
+  positiveEvolution:"false",
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -82,27 +88,32 @@ ReactDOM.render(
     <div className='app'>
       <div className='frame'>
 
-        <div className='window'>
-          <FrameInfo />
+        <div className='info'>
+          <FrameInfo  info = {infoTotalInteraction}/>
+          {/* <FrameInfo /> */}
         </div>
 
-        <div className='pieChart' style={{ width: '400px', height: '400px' }}>
-          {/* //title "Distribution of Message Handling Outcomes" */}
-        <PieChart data={dataPie} title="Distribution of responses" colorsMap = {colorsMap}/>
-        </div>
-        
-        <DonutChart data={dataCalls} colorsMap={colorsMap} title="Calls per User"/>
-
-        <div style={{ width: '400px', height: '400px' }}>
+        <div className='window lineChart' >
           <LineChart data={dataLine} />
         </div>
-        
-        <GroupedBarChart data={dataFallbacks} title ="Evolution of fallbacks" labels = {labelsFallbacks} colorsMap = {colorsMap}/>
-        {/* //"Evolution of misunderstanding" */}
-        
-        <div>
-          <Histogram data = {dataWeek} title="Weekly histogram"/>
+        <div className='window pieChart' >
+          {/* //title "Distribution of Message Handling Outcomes" */}
+          <PieChart data={dataPie} title="Distribution of responses" colorsMap = {colorsMap}/>
         </div>
+
+        
+        <div className='window groupedBarChart' >
+          <GroupedBarChart data={dataFallbacks} title ="Evolution of fallbacks" labels = {labelsFallbacks} colorsMap = {colorsMap}/>
+          {/* //"Evolution of misunderstanding" */}
+        </div>
+
+        <div className='window donutChart' >
+          <DonutChart data={dataCalls} colorsMap={colorsMap} title="Calls per User"/>
+        </div>
+        
+        {/* <div className='window histo' >
+          <Histogram data = {dataWeek} title="Weekly histogram"/>
+        </div> */}
 
     </div>
   </div>
