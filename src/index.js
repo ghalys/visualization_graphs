@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/App.css';
 
-// import PieChart from './PieChart_ant_design';
-// import PieChart from './PieChart_chartjs';
+// import PieChart from './graphs/pieChart/PieChart_ant_design';
+// import PieChart from './graphs/pieChart/PieChart_chartjs';
 import PieChart from './graphs/pieChart/PieChart_apexChart.js';
 
 import LineChart from './graphs/LineChart_chartJs.js';
@@ -82,7 +82,9 @@ ReactDOM.render(
     <div className='app'>
       <div className='frame'>
 
-        <FrameInfo/>
+        <div className='window'>
+          <FrameInfo />
+        </div>
 
         <div className='pieChart' style={{ width: '400px', height: '400px' }}>
           {/* //title "Distribution of Message Handling Outcomes" */}

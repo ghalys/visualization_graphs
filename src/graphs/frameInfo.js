@@ -10,7 +10,7 @@ function FrameInfo() {
       <div className="card">
         <div className="card-header">
           <span>Total Interactions</span>
-          <img src={userIcon} alt="User Icon" className="user-icon" />
+          <img src={userIcon} alt="User Icon" className="icon" />
         </div>
         <div className="card-body">
           <div className="card-number">50</div>
