@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/App.css';
+import userIcon from './icons/total_interaction_icon.png'; 
+
 
 // import PieChart from './graphs/pieChart/PieChart_ant_design';
 // import PieChart from './graphs/pieChart/PieChart_chartjs';
@@ -51,10 +53,18 @@ const dataWeek = [
 ]
 
 const dataFallbacks = [
-  { date: '2022-01-01', val_1: 30, val_2: 40 },
-  { date: '2022-01-02', val_1: 20, val_2: 30 },
-  { date: '2022-01-03', val_1: 40, val_2: 50 },
-  { date: '2022-01-04', val_1: 10, val_2: 20 }
+  { date: '01/01/2024', val_1: 30, val_2: 40 },
+  { date: '02/01/2024', val_1: 20, val_2: 30 },
+  { date: '03/01/2024', val_1: 40, val_2: 50 },
+  { date: '04/01/2024', val_1: 10, val_2: 20 },
+  { date: '01/01/2024', val_1: 30, val_2: 40 },
+  { date: '02/01/2024', val_1: 20, val_2: 30 },
+  { date: '03/01/2024', val_1: 40, val_2: 50 },
+  { date: '04/01/2024', val_1: 10, val_2: 20 },
+  { date: '01/01/2024', val_1: 30, val_2: 40 },
+  { date: '02/01/2024', val_1: 20, val_2: 30 },
+  { date: '03/01/2024', val_1: 40, val_2: 50 },
+  { date: '04/01/2024', val_1: 10, val_2: 20 },
 ];
 
 const dataCalls = [
@@ -96,10 +106,10 @@ ReactDOM.render(
       <div className='frame'>
 
         <div className='info'>
-          <FrameInfo  info = {infoTotalInteraction}/>
-          <FrameInfo  info = {infoTotalSatisfaction}/>
-          <FrameInfo  info = {infoTotalSatisfaction}/>
-          <FrameInfo  info = {infoTotalSatisfaction}/>
+          <FrameInfo  info = {infoTotalInteraction} icon= {userIcon}/>
+          <FrameInfo  info = {infoTotalSatisfaction} icon= {userIcon}/>
+          <FrameInfo  info = {infoTotalSatisfaction} icon= {userIcon}/>
+          <FrameInfo  info = {infoTotalSatisfaction} icon= {userIcon}/>
         </div>
 
         <div className='window lineChart center' >

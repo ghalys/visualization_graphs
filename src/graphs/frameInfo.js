@@ -1,11 +1,10 @@
 import React from 'react';
 import '../css/frameInfo.css';
-import userIcon from '../icons/total_interaction_icon.png'; // Chemin vers votre icône utilisateur
-import redArrowIcon from '../icons/redArrowIcon.png'; // Chemin vers votre icône utilisateur
-import greenArrowIcon from '../icons/greenArrowIcon.png'; // Chemin vers votre icône utilisateur
+import redArrowIcon from '../icons/redArrowIcon.png';
+import greenArrowIcon from '../icons/greenArrowIcon.png';
 
 
-function FrameInfo({info}) {
+function FrameInfo({info,icon}) {
 
   const arrowIcon = info.positiveEvolution === "true" ? greenArrowIcon : redArrowIcon;
   const arrowClass = info.positiveEvolution === "true" ? 'positive-evolution' : 'negative-evolution';
@@ -13,7 +12,7 @@ function FrameInfo({info}) {
       <div className="window card">
         <div className="card-header">
           <span>{info.title}</span>
-          <img src={userIcon} alt="User Icon" className="icon" />
+          <img src={icon} alt="User Icon" className="icon" />
         </div>
         <div className="card-body">
           <div className="card-number">{info.number}</div>

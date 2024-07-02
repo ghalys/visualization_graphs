@@ -17,16 +17,16 @@
 }
 
 .card-header span {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   color: #4B4E51;
   /* color: #4a4a4a; */
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
-  background-color: #e0e7ff;
+  width:  50px;
+  height: 50px;
+  /* background-color: #e0e7ff; */
   border-radius: 50%;
   padding: 8px;
 }

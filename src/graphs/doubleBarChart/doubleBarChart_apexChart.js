@@ -40,9 +40,11 @@ const GroupedBarChart = ({ data,title, labels, colorsMap}) => {
     colors : labels.map(label => colorsMap[label]),
     xaxis: {
       categories: categories,
-      type: 'datetime',
+      // type: 'datetime',
       labels: {
-        format: 'dd MMM yyyy' // Adjust the format according to your needs
+        format: 'dd MMM yyyy', // Adjust the format according to your needs
+        // rotate: -45,
+        // rotateAlways: true
       }
     },
     title: {
@@ -50,7 +52,7 @@ const GroupedBarChart = ({ data,title, labels, colorsMap}) => {
       align: 'center'
     },
     dataLabels: {
-      enabled: true,
+      enabled: false, //TODO - we don't show the label
       style: {
         fontSize: '12px',
         fontWeight: 'bold',
