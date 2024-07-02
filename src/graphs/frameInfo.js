@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import userIcon from './icons/total_interaction_icon.png'; // Chemin vers votre icône utilisateur
-import redArrowIcon from './icons/redArrowIcon.png'; // Chemin vers votre icône utilisateur
+import '../css/App.css';
+import userIcon from '../icons/total_interaction_icon.png'; // Chemin vers votre icône utilisateur
+import redArrowIcon from '../icons/redArrowIcon.png'; // Chemin vers votre icône utilisateur
 
 
 function FrameInfo() {

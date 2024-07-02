@@ -1,5 +1,5 @@
 import React from 'react';
-import BarExcelReader from './components/BarExcelReader';
+import BarExcelReader from './BarExcelReader';
 // import BarChart from './components/BarChart';
 
 const App = () => {

@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import './css/App.css';
 
 // import PieChart from './PieChart_ant_design';
 // import PieChart from './PieChart_chartjs';
-import PieChart from './PieChart_apexChart';
+import PieChart from './graphs/pieChart/PieChart_apexChart.js';
 
-import LineChart from './LineChart_chartJs';
+import LineChart from './graphs/LineChart_chartJs.js';
 
-import Histogram from './barChart_apexChart';
+import Histogram from './graphs/barChart_apexChart.js';
 
-import GroupedBarChart from './doubleBarChart_apexChart';
+import GroupedBarChart from './graphs/doubleBarChart/doubleBarChart_apexChart.js';
 
-import DonutChart from './DonutChart_apexChart';
+import DonutChart from './graphs/DonutChart_apexChart.js';
 
-import FrameInfo from './frameInfo.js'
+import FrameInfo from './graphs/frameInfo.js'
 
 
 const dataPie = [
@@ -79,8 +79,8 @@ const colorsMap = {
 ReactDOM.render(
   <React.StrictMode>
 
-    {/* <div className='app'>
-      <div className='frame'> */}
+    <div className='app'>
+      <div className='frame'>
 
         <FrameInfo/>
 
@@ -102,8 +102,8 @@ ReactDOM.render(
           <Histogram data = {dataWeek} title="Weekly histogram"/>
         </div>
 
-    {/* </div>
-  </div> */}
+    </div>
+  </div>
 
   </React.StrictMode>,
   document.getElementById('root')
