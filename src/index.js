@@ -79,7 +79,7 @@ const infoTotalInteraction = {
   title:"Total Interactions",
   number: "50",
   percentage:"8.5%",
-  positiveEvolution:"false",
+  positiveEvolution:"true",
 }
 
 ReactDOM.render(
