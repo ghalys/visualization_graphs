@@ -90,13 +90,28 @@ const infoTotalInteraction = {
   number: "50",
   percentage:"8.5%",
   positiveEvolution:"true",
+  growing : "true",
 }
-
 const infoTotalSatisfaction = {
   title:"Total Satisfaction",
   number: "80%",
   percentage:"4.3%",
   positiveEvolution:"false",
+  growing : "false",
+}
+const infoConversationDuration = {
+  title:"Conversation Duration",
+  number: "50s",
+  percentage:"1.8%",
+  positiveEvolution:"true",
+  growing : "true",
+}
+const infoNumberOfTransfers = {
+  title:"Number Of Transfers",
+  number: "12",
+  percentage:"4%",
+  positiveEvolution:"false",
+  growing : "true",
 }
 
 ReactDOM.render(
@@ -107,9 +122,9 @@ ReactDOM.render(
 
         <div className='info'>
           <FrameInfo  info = {infoTotalInteraction} icon= {userIcon}/>
+          <FrameInfo  info = {infoConversationDuration} icon= {userIcon}/>
           <FrameInfo  info = {infoTotalSatisfaction} icon= {userIcon}/>
-          <FrameInfo  info = {infoTotalSatisfaction} icon= {userIcon}/>
-          <FrameInfo  info = {infoTotalSatisfaction} icon= {userIcon}/>
+          <FrameInfo  info = {infoNumberOfTransfers} icon= {userIcon}/>
         </div>
 
         <div className='window lineChart center' >

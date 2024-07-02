@@ -1,13 +1,26 @@
 import React from 'react';
 import '../css/frameInfo.css';
-import redArrowIcon from '../icons/redArrowIcon.png';
-import greenArrowIcon from '../icons/greenArrowIcon.png';
+import redIncreasingArrowIcon from '../icons/redIncreasingArrowIcon.png';
+import redDecreasingArrowIcon from '../icons/redDecreasingArrowIcon.png';
+import greenIncreasingArrowIcon from '../icons/greenIncreasingArrowIcon.png';
+import greenDecreasingArrowIcon from '../icons/greenDecreasingArrowIcon.png';
 
 
 function FrameInfo({info,icon}) {
+  var arrowClass = '';
+  var arrowIcon;
 
-  const arrowIcon = info.positiveEvolution === "true" ? greenArrowIcon : redArrowIcon;
-  const arrowClass = info.positiveEvolution === "true" ? 'positive-evolution' : 'negative-evolution';
+  if (info.positiveEvolution==="true"){
+    arrowClass = 'positive-evolution' ;
+    arrowIcon = info.growing === "true" ? greenIncreasingArrowIcon : greenDecreasingArrowIcon ;
+  }
+  else{
+    arrowClass = 'negative-evolution' ;
+    arrowIcon = info.growing === "true" ? redIncreasingArrowIcon : redDecreasingArrowIcon;
+  }
+  
+
+
   return (
       <div className="window card">
         <div className="card-header">
@@ -17,7 +30,7 @@ function FrameInfo({info,icon}) {
         <div className="card-body">
           <div className="card-number">{info.number}</div>
           <div className="card-footer">
-            <img src={arrowIcon} alt="arrowIcon" className={`arrow-icon ${arrowClass}`} />
+            <img src={arrowIcon} alt="arrowIcon" className={`arrow-icon negative-evolution`} />
             <span className={`percentage ${arrowClass}`}>{info.percentage}</span>
           </div>
         </div>
