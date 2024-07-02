@@ -1,17 +1,110 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import './App.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// import PieChart from './PieChart_ant_design';
+// import PieChart from './PieChart_chartjs';
+import PieChart from './PieChart_apexChart';
+
+import LineChart from './LineChart_chartJs';
+
+import Histogram from './barChart_apexChart';
+
+import GroupedBarChart from './doubleBarChart_apexChart';
+
+import DonutChart from './DonutChart_apexChart';
+
+import FrameInfo from './frameInfo.js'
+
+
+const dataPie = [
+  { item: 'Messages well handed', value: 40 },
+  { item: 'NLU Fallbacks', value: 5 },
+  { item: 'Functional Fallbacks', value: 5 },
+]
+
+const dataLine = [
+  { date: '2024-01-01', value: 10, category: 'Previous Period' },
+  { date: '2024-01-02', value: 15, category: 'Previous Period' },
+  { date: '2024-01-03', value: 20, category: 'Previous Period' },
+  { date: '2024-01-04', value: 20, category: 'Previous Period' },
+  { date: '2024-01-05', value: 10, category: 'Previous Period' },
+  { date: '2024-01-06', value: 28, category: 'Previous Period' },
+  { date: '2024-01-07', value:  0, category: 'Previous Period' },
+  { date: '2024-01-01', value: 12, category: 'Current Period' },
+  { date: '2024-01-02', value: 18, category: 'Current Period' },
+  { date: '2024-01-03', value: 25, category: 'Current Period' },
+  { date: '2024-01-04', value: 20, category: 'Current Period' },
+  { date: '2024-01-05', value: 20, category: 'Current Period' },
+  { date: '2024-01-06', value: 20, category: 'Current Period' },
+  { date: '2024-01-07', value: 20, category: 'Current Period' },
+];
+
+const dataWeek = [
+  {weekday : 'Sunday'   ,value: 10},
+  {weekday : 'Monday'   ,value: 15},
+  {weekday : 'Tuesday'  ,value: 18},
+  {weekday : 'Wednesday',value: 0 },
+  {weekday : 'Thursday' ,value: 10},
+  {weekday : 'Friday'   ,value: 20},
+  {weekday : 'Saturday' ,value: 13 }
+]
+
+const dataFallbacks = [
+  { date: '2022-01-01', val_1: 30, val_2: 40 },
+  { date: '2022-01-02', val_1: 20, val_2: 30 },
+  { date: '2022-01-03', val_1: 40, val_2: 50 },
+  { date: '2022-01-04', val_1: 10, val_2: 20 }
+];
+
+const dataCalls = [
+  { item: 'One Call', value: 63 },
+  { item: 'Two Calls', value: 25 },
+  { item: 'Three Calls', value: 25 },
+  { item: 'More Calls', value: 9 }
+];
+
+const labelsFallbacks = ["NLU Fallbacks","Functional Fallbacks"]
+const colorsMap = {
+  'Messages well handed': '#99ff99',
+  'NLU Fallbacks': '#0073FF',
+  'Functional Fallbacks': '#F4A79D',
+  'One Call':'#CCE7FF',
+  'Two Calls':'#99CFFF',
+  'Three Calls':'#66B8FF',
+  'More Calls':'#339FFF',
+};
+
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    {/* <div className='app'>
+      <div className='frame'> */}
+
+        <FrameInfo/>
+
+        <div className='pieChart' style={{ width: '400px', height: '400px' }}>
+          {/* //title "Distribution of Message Handling Outcomes" */}
+        <PieChart data={dataPie} title="Distribution of responses" colorsMap = {colorsMap}/>
+        </div>
+        
+        <DonutChart data={dataCalls} colorsMap={colorsMap} title="Calls per User"/>
+
+        <div style={{ width: '400px', height: '400px' }}>
+          <LineChart data={dataLine} />
+        </div>
+        
+        <GroupedBarChart data={dataFallbacks} title ="Evolution of fallbacks" labels = {labelsFallbacks} colorsMap = {colorsMap}/>
+        {/* //"Evolution of misunderstanding" */}
+        
+        <div>
+          <Histogram data = {dataWeek} title="Weekly histogram"/>
+        </div>
+
+    {/* </div>
+  </div> */}
+
+  </React.StrictMode>,
+  document.getElementById('root')
+);
