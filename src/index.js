@@ -6,7 +6,7 @@ import './css/App.css';
 // import PieChart from './graphs/pieChart/PieChart_chartjs';
 import PieChart from './graphs/pieChart/PieChart_apexChart.js';
 
-import LineChart from './graphs/LineChart_chartJs.js';
+import LineChart from './graphs/lineChart/LineChart_chartJs.js';
 
 import Histogram from './graphs/barChart_apexChart.js';
 
@@ -82,6 +82,13 @@ const infoTotalInteraction = {
   positiveEvolution:"true",
 }
 
+const infoTotalSatisfaction = {
+  title:"Total Satisfaction",
+  number: "80%",
+  percentage:"4.3%",
+  positiveEvolution:"false",
+}
+
 ReactDOM.render(
   <React.StrictMode>
 
@@ -90,12 +97,15 @@ ReactDOM.render(
 
         <div className='info'>
           <FrameInfo  info = {infoTotalInteraction}/>
-          {/* <FrameInfo /> */}
+          <FrameInfo  info = {infoTotalSatisfaction}/>
+          <FrameInfo  info = {infoTotalSatisfaction}/>
+          <FrameInfo  info = {infoTotalSatisfaction}/>
         </div>
 
-        <div className='window lineChart' >
+        <div className='window lineChart center' >
           <LineChart data={dataLine} />
         </div>
+
         <div className='window pieChart' >
           {/* //title "Distribution of Message Handling Outcomes" */}
           <PieChart data={dataPie} title="Distribution of responses" colorsMap = {colorsMap}/>

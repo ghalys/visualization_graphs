@@ -7,8 +7,8 @@ import greenArrowIcon from '../icons/greenArrowIcon.png'; // Chemin vers votre i
 
 function FrameInfo({info}) {
 
-  const arrowIcon = info.positiveEvolution == "true" ? greenArrowIcon : redArrowIcon;
-  const arrowClass = info.positiveEvolution == "true" ? 'positive-evolution' : 'negative-evolution';
+  const arrowIcon = info.positiveEvolution === "true" ? greenArrowIcon : redArrowIcon;
+  const arrowClass = info.positiveEvolution === "true" ? 'positive-evolution' : 'negative-evolution';
   return (
       <div className="window card">
         <div className="card-header">
