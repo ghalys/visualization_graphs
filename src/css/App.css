@@ -67,21 +67,27 @@ html, body {
 
 
 .pieChart{
-  height: 320px;
-  width: 450px;
+  /* height: 320px; */
+  height: 40%;
+  /* width: 450px; */
+  width: 30%;
   /* display: flex; 
   justify-content: center; 
   align-items: center;  */
 }
 
 .groupedBarChart{
-  height: 320px;
-  width: 450px;
+  /* height: 320px; */
+  /* width: 450px; */
+  height: 40%;
+  width: 30%;
 }
 
 .donutChart{
-  height: 320px;
-  width: 450px;
+  /* height: 320px; */
+  /* width: 450px; */
+  height: 40%;
+  width: 30%;
 }
 
 .histo{

@@ -37,7 +37,7 @@ const DonutChart = ({ data, colorsMap, title}) => {
       },
       floating: false, 
       offsetX: -55,
-      offsetY: 135,
+      offsetY: 115,
     },
 
     tooltip: {
